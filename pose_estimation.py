@@ -34,7 +34,7 @@ class PoseEstimationNode(Node):
         self.bridge = CvBridge()
         self.subscription = self.create_subscription(
             Image,
-            'video_frames',
+            'rgb_left',
             self.listener_callback,
             10)
         self.publisher = self.create_publisher(Image, 'pose_estimation', 10)
